@@ -6,11 +6,9 @@ package br.com.ifba.cursos.repository;
 
 import br.com.ifba.cursos.entity.Curso;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author hmart
- */
-public interface PessoaRepository extends JpaRepository<Curso, Long>{
+@Repository
+public interface CursoRepository extends JpaRepository<Curso, Long>{
     
 }

@@ -14,6 +14,7 @@ public class CursoCadastrar extends javax.swing.JFrame {
      * Creates new form CursoCadastrar
      */
     public CursoCadastrar() {
+
         initComponents();
     }
 

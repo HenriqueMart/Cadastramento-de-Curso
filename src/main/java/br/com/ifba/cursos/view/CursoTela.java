@@ -4,6 +4,12 @@
  */
 package br.com.ifba.cursos.view;
 
+import br.com.ifba.CursoSave;
+import br.com.ifba.cursos.entity.Curso;
+import br.com.ifba.cursos.repository.CursoRepository;
+import java.awt.List;
+import javax.swing.table.DefaultTableModel;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 /**
@@ -16,9 +22,7 @@ public class CursoTela extends javax.swing.JFrame {
     /**
      * Creates new form CursoTela
      */
-    public CursoTela() {
-        initComponents();
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,7 +35,7 @@ public class CursoTela extends javax.swing.JFrame {
 
         txtPesquisa = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        lblTabela = new javax.swing.JTable();
+        jTabela = new javax.swing.JTable();
         btnAdicionar = new javax.swing.JButton();
         btnExcluir = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -51,7 +55,7 @@ public class CursoTela extends javax.swing.JFrame {
         });
         getContentPane().add(txtPesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 17, 151, -1));
 
-        lblTabela.setModel(new javax.swing.table.DefaultTableModel(
+        jTabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null}
@@ -60,7 +64,7 @@ public class CursoTela extends javax.swing.JFrame {
                 "NOME", "ID_Curso", "STATUS"
             }
         ));
-        jScrollPane2.setViewportView(lblTabela);
+        jScrollPane2.setViewportView(jTabela);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 58, 555, 269));
 
@@ -107,6 +111,7 @@ public class CursoTela extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+       
     private void txtPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPesquisaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPesquisaActionPerformed
@@ -176,7 +181,7 @@ public class CursoTela extends javax.swing.JFrame {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnPesquisar;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable lblTabela;
+    private javax.swing.JTable jTabela;
     private javax.swing.JTextField txtPesquisa;
     // End of variables declaration//GEN-END:variables
 }
