@@ -12,6 +12,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class CursoSave {
 
     @Autowired
+    /*Repositório com bean do spring boot*/
     private CursoRepository cursoRepository;
     
 	public static void main(String[] args) {
